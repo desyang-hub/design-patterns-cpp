@@ -3,7 +3,7 @@
 #include <functional>
 
 class Observer;
-using CallBack = std::function<void(const Observer&)>;
+using CallBack = std::function<void()>;
 
 // 观察者
 class Observer
@@ -23,7 +23,7 @@ public:
 
     void Notify() {
         if (m_cb) {
-            m_cb(*this);
+            m_cb();
         }
     }
 };
