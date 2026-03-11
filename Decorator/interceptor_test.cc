@@ -7,7 +7,7 @@ int main() {
     interceptor = std::make_unique<PortInterceptor>(std::move(interceptor));
     interceptor = std::make_unique<HttpInterceptor>(std::move(interceptor));
 
-    std::make_unique<HttpInterceptor>();
+    
 
     Request request = {
         "192.0.0.1",
@@ -15,6 +15,8 @@ int main() {
         "admin",
         "desyang"
     };
+
+    std::make_unique<HttpInterceptor>()->verify(request);
 
     bool is_verify = interceptor->verify(request);
     LOG_INFO << "verify: " << is_verify << endl;
