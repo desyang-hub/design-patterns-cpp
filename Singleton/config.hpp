@@ -6,7 +6,7 @@
 class Configration
 {
 private:
-    Configration(/* args */);
+    Configration();
     virtual ~Configration();
 public:
     // 删除构造函数

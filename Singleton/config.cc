@@ -9,7 +9,7 @@ Configration::~Configration()
 }
 
 Configration& Configration::GetConfig() {
-    static Configration m_config = Configration();
+    static Configration m_config;
     return m_config;
 }
 
